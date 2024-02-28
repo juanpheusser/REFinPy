@@ -127,6 +127,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+REFinPy/
 
 # Spyder project settings
 .spyderproject

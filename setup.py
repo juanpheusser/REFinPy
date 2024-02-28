@@ -12,9 +12,8 @@ setup(
     license='MIT',
     packages=find_packages(), 
     install_requires=[
-        'numpy',
-        'pandas',
-        'scipy',
+        'numpy==1.26.4',
+        'pandas==2.2.1',
     ],
     classifiers=[
         'Programming Language :: Python :: 3',

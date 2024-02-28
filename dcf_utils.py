@@ -1,4 +1,6 @@
 import pandas as pd
+import numpy as np
+from typing import Union
 
 def create_dataframe(row_names: list[str], initial_year: int, num_years: int) -> pd.DataFrame:
   """
@@ -22,7 +24,7 @@ def create_dataframe(row_names: list[str], initial_year: int, num_years: int) ->
   return dcf
 
 
-def insert_data_into_row(dcf: pd.DataFrame, row_name: str, data: list[float] | pd.Series) -> None:
+def insert_data_into_row(dcf: pd.DataFrame, row_name: str, data: Union[list[float], pd.Series]) -> None:
   """
   Inserts a list of data into the specified row of a pandas DataFrame.
 
@@ -42,7 +44,7 @@ def insert_data_into_row(dcf: pd.DataFrame, row_name: str, data: list[float] | p
   # Insert the data into the specified row
   dcf.loc[row_name] = data
 
-def calculate_vacancy(dcf: pd.DataFrame, rates: pd.Dataframe) -> None:
+def calculate_vacancy(dcf: pd.DataFrame, rates: pd.DataFrame) -> None:
   """
   Calculates vacancy by multiplying the Gross Revenue by the Vacancy Rate and inserts the result into the Vacancy row.
 
