@@ -81,6 +81,7 @@ target/
 
 # Sandbox
 sandbox/
+sandbox.py
 
 # IPython
 profile_default/
